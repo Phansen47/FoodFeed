@@ -1,13 +1,9 @@
-{{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
-  </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
+{{!-- code to start from MVC mini project --}}
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{username}}!</h2>
   </div>
 </div>
-{{/each}}
 {{!-- --------------------------------------------------------------------------- --}}
 {{#each users as |user| }}
     <div class="container">
@@ -36,3 +32,5 @@
         </div>
     </div>
 {{/each}}
+
+
