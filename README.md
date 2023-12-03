@@ -10,9 +10,9 @@
 
 
 ## Description
-We are creating an app that will allow people to create and share recipes for food and drinks. It will include private logins and the ability to create a profile and add recipes to share.
+We are creating an app that will allow people to create and ssave recipes for food and drinks. It will include private logins and the ability to create a profile where the user can save and view their recipes.
 ## Installation
-***Requirments***
+***Requirements***
 
 
 
