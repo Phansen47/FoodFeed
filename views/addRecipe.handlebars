@@ -1,21 +1,114 @@
-  <div class="col-md-6">
-    <h3>Create a New Recipe:</h3>
+<!DOCTYPE html>
+<html lang="en">
 
-    <form class="form new-project-form">
-      <div class="form-group">
-        <label for="recipe-name">Recipe name:</label>
-        <input class="form-input" type="text" id="recipe-name" name="recipe-name" />
-      </div>
-      <div class="form-group">
-        <label for="recipe-instructions">Recipe Instructions</label>
-        <input class="form-input" type="textarea" id="recipe-instructions" name="recipe-instructions" />
-      </div>
-      <div class="form-group">
-        <label for="ingredient1">Ingredient 1</label>
-        <textarea class="form-input" id="ingredient1" name="ingredient1"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
-      </div>
-    </form>
-  </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="card bg-light">
+            <article class="card-body mx-auto" style="max-width: 400px;">
+                <h4 class="card-title mt-3 text-center">Create a New Recipe</h4>
+                <form>
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Recipe Name" type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="bi bi-list-check"></i> </span>
+                        </div>
+                        <input name="" class="form-control" placeholder="Recipe Instructions" type="text">
+                    </div> <!-- form-group// -->
+                    <div class="form-group input-group">
+
+                    </div>
+                    <!-- Ingredient 1 -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
+                        </div>
+                        <select class="form-control">
+                            <option selected=""> Select Ingredient #1</option>
+                            <option>penne rigate</option>
+                            <option>olive oil</option>
+                            <option>garlic</option>
+                            <option>chopped tomatoes</option>
+                            <option>olive oil</option>
+                            <option>garlic</option>
+                        </select>
+                    </div>
+                    <!-- Ingredient 2 -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
+                        </div>
+                        <select class="form-control">
+                            <option selected=""> Select Ingredient #2</option>
+                            <option>penne rigate</option>
+                            <option>olive oil</option>
+                            <option>garlic</option>
+                            <option>chopped tomatoes</option>
+                            <option>olive oil</option>
+                            <option>garlic</option>
+                        </select>
+                    </div>
+                    <!-- Ingredient 3 -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
+                        </div>
+                        <select class="form-control">
+                            <option selected=""> Select Ingredient #3</option>
+                            <option>penne rigate</option>
+                            <option>olive oil</option>
+                            <option>garlic</option>
+                            <option>chopped tomatoes</option>
+                            <option>olive oil</option>
+                            <option>garlic</option>
+                        </select>
+                    </div>
+                    <!-- Ingredient 4 -->
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
+                        </div>
+                        <select class="form-control">
+                            <option selected=""> Select Ingredient #4</option>
+                            <option>penne rigate</option>
+                            <option>olive oil</option>
+                            <option>garlic</option>
+                            <option>chopped tomatoes</option>
+                            <option>olive oil</option>
+                            <option>garlic</option>
+                        </select>
+                    </div>
+                    <!-- Create Btn -->
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block"> Create </button>
+                    </div>
+                </form>
+            </article>
+        </div> <!-- card.// -->
+    </div>
+    <!--container end.//-->
+</html>
