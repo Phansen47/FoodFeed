@@ -1,0 +1,20 @@
+[
+  {
+    "title": "PB&J",
+    "category": "Vegetarian",
+    "area": "American",
+    "instructions": "Spread peanut butter on one slice of bread and spread jelly or jam on the other. Stick slices together on the pb and jelly sides.",
+    "ingredient1": "2 Tbsp Peanut Butter",
+    "ingredient2": "2 Tbsp Jelly or Jam",
+    "ingredient3": "2 slices of sandwich bread",
+    "ingredient4": null,
+    "ingredient5":null,
+    "ingredient6":null,
+    "ingredient7":null,
+    "ingredient8":null,
+    "ingredient9":null,
+    "ingredient10":null,
+    "user_id":1
+  }
+
+]
