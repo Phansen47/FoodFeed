@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Meal } = require('../../models');
+const { User, Meal } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //get all saved meals - works in insomnia
 router.get('/', withAuth, async (req, res)=>{
   // return res.json({"name": "whitney"})
   try{
-    const mealData = await Meal.findAll({
+    const userData = await Meal.findAll({
       include: [
         {
           model: User,
@@ -55,6 +55,7 @@ router.post('/', async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 //delete recipe - works in insomnia
 router.delete('/:id', async (req, res) => {
   try {
