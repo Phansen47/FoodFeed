@@ -2,32 +2,32 @@ const router = require('express').Router();
 const { User, Meal } = require('../models');
 const withAuth = require('../utils/auth');
 
-//redirects don't work when logged in, user data and meal data don't render 
-router.get('/', async (req, res) => {
-  try {
-    // Get all meals and JOIN with user data
-    const mealData = await Meal.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+// //redirects don't work when logged in, user data and meal data don't render 
+// router.get('/', async (req, res) => {
+//   try {
+//     // Get all meals and JOIN with user data
+//     const mealData = await Meal.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//     });
 
-    // Serialize data so the template can read it
-    const meals = mealData.map((meal) => meal.get({ plain: true }));
-      console.log(req.session.user_id);
-      console.log(req.session.logged_in);
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      meals, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//     // Serialize data so the template can read it
+//     const meals = mealData.map((meal) => meal.get({ plain: true }));
+//       console.log(req.session.user_id);
+//       console.log(req.session.logged_in);
+//     // Pass serialized data and session flag into template
+//     res.render('homepage', { 
+//       meals, 
+//       logged_in: req.session.logged_in 
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.get('/meals/:id', async (req, res) => {
   try {
@@ -74,6 +74,8 @@ router.get('/add', withAuth, async (req, res) => {
 // Use withAuth middleware to prevent access to route
 //this doesn't work right
 router.get('/', withAuth, async (req, res) => {
+  console.log(req.session.user_id);
+  
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -82,9 +84,9 @@ router.get('/', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
+    console.log(user);
     res.render('homepage', {
-      ...user,
+      user,
       logged_in: true
     });
   } catch (err) {

@@ -1,13 +1,15 @@
 {{!-- code to start from MVC mini project --}}
 <div class="row">
   <div class="col-auto">
-    {{#each meals as |meal|}}
-    <h2>Welcome, {{meal.user.name}}!</h2>
+    {{!-- {{#each meals as |meal|}} --}}
+    <h2>Welcome, {{user.name}}!</h2>
+    {{#each user.meals as |meal| }}
+    <p>{{meal.title}}</p>
     {{/each}}
   </div>
 </div>
 {{!-- --------------------------------------------------------------------------- --}}
-{{#each meals as |meal| }}
+{{#each user.meals as |meal| }}
     <div class="container">
         <h1>My Recipes</h1>
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4">
