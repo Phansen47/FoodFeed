@@ -15,13 +15,13 @@ const newFormHandler = async (event) => {
     const ingredient8 = document.querySelector('#ingredient-1').value.trim();
     const ingredient9 = document.querySelector('#ingredient-9').value.trim();
     const ingredient10 = document.querySelector('#ingredient-10').value.trim();
-
+    const user_id = req.session.user_id;
 
     if (title && instructions) {
       const response = await fetch(`/api/meals`, {
         method: 'POST',
         body: JSON.stringify({ title, instructions, category, area, ingredient1, ingredient2, 
-        ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10}),
+        ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, user_id}),
         headers: {
           'Content-Type': 'application/json',
         },
