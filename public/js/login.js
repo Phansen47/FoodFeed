@@ -1,7 +1,7 @@
 const loginFormHandler = async (event) => {
   // Stop the browser from submitting the form so we can do so with JavaScript
   event.preventDefault();
-
+  console.log("test1")
   // Gather the data from the form elements on the page
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
@@ -13,8 +13,9 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
-
+    console.log("test1")
     if (response.ok) {
+      console.log("test2")
       document.location.replace('/');
   
     } else {
