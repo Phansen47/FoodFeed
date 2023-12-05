@@ -17,7 +17,8 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const meals = mealData.map((meal) => meal.get({ plain: true }));
-
+      console.log(req.session.user_id);
+      console.log(req.session.logged_in);
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       meals, 

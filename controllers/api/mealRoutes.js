@@ -2,45 +2,45 @@ const router = require('express').Router();
 const { User, Meal } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//get all saved meals - works in insomnia
-router.get('/', withAuth, async (req, res)=>{
-  // return res.json({"name": "whitney"})
-  try{
-    const userData = await Meal.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-      where:{
-        user_id: req.session.user_id
-      }
-    });
-    //serialize data
-    const meals = mealData.map((meal) => meal.get({ plain: true }));
-    //render user recipes on home page
-    res.render('homepage', meals);
-    res.json(mealData)
-  }catch (err){
-    res.status(500).json(err)
-  }
-});
+// //get all saved meals - works in insomnia
+// router.get('/', withAuth, async (req, res)=>{
+//   // return res.json({"name": "whitney"})
+//   try{
+//     const userData = await Meal.findAll({
+//       include: [
+//         {
+//           model: User,
+//           attributes: ['name'],
+//         },
+//       ],
+//       where:{
+//         user_id: req.session.user_id
+//       }
+//     });
+//     //serialize data
+//     const meals = mealData.map((meal) => meal.get({ plain: true }));
+//     //render user recipes on home page
+//     res.render('homepage', meals);
+//     res.json(mealData)
+//   }catch (err){
+//     res.status(500).json(err)
+//   }
+// });
 
-//get one meal by id -- working  in insomnia
-router.get('/:id', async (req, res)=>{
-  // return res.json({"name": "whitney"})
-  try{
-    const mealData = await Meal.findByPk(req.params.id);
-    //serialize data
-    const meal = mealData.map((project) => project.get({ plain: true }));
-    //render user recipes on home page
-    res.render('view', {meal});
-    res.json(mealData)
-  }catch (err){
-    res.status(500).json(err)
-  }
-});
+// //get one meal by id -- working  in insomnia
+// router.get('/:id', async (req, res)=>{
+//   // return res.json({"name": "whitney"})
+//   try{
+//     const mealData = await Meal.findByPk(req.params.id);
+//     //serialize data
+//     const meal = mealData.map((project) => project.get({ plain: true }));
+//     //render user recipes on home page
+//     res.render('view', {meal});
+//     res.json(mealData)
+//   }catch (err){
+//     res.status(500).json(err)
+//   }
+// });
 
 //add recipe - works in insomnia and user_id works correctly
 router.post('/', async (req, res) => {
