@@ -44,6 +44,10 @@ As a chef, I want to easily find and save recipes, so that I don't have to spend
 
 ## Video
 
+## Credits
+
+We used the code from module 14 activity 28 from our bootcamp class to start and customized it to fit our needs.
+
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)

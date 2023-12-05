@@ -12,15 +12,31 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                         </div>
-                        <input name="" class="form-control" id="recipe-name" placeholder="Recipe Name" type="text">
-                    </div> <!-- form-group// -->
+                        <input name="recipe-name" class="form-control" id="recipe-name" placeholder="Recipe Name" type="text">
+                    </div> <!-- title form-group// -->
                     <div class="form-group input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"> <i class="bi bi-list-check"></i> </span>
                         </div>
                         <textarea class="form-control" id="recipe-instructions" rows="3"
-                            placeholder="Recipe Instructions"></textarea>
-                    </div> <!-- form-group// -->
+                            placeholder="Instructions"></textarea>
+                    </div> <!-- instructions form-group// -->
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="category" class="form-control" id="category" placeholder="Category" type="text">
+                    </div>
+                    {{!-- category input --}}
+
+                    <div class="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                        </div>
+                        <input name="area" class="form-control" id="area" placeholder="Area" type="text">
+                    </div>
+                    {{!-- area input --}}
 
                     <!-- Ingredient 1 -->
                     <div class="form-group input-group">
@@ -132,3 +148,7 @@
 
     </div>
     <!--container end.//-->
+
+    <script src="./js/add.js"></script>
+
+    
