@@ -1,11 +1,13 @@
 {{!-- code to start from MVC mini project --}}
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{user.name}}!</h2>
+    {{#each meals as |meal|}}
+    <h2>Welcome, {{meal.user.name}}!</h2>
+    {{/each}}
   </div>
 </div>
 {{!-- --------------------------------------------------------------------------- --}}
-{{!-- {{#each meals as |meal| }} --}}
+{{#each meals as |meal| }}
     <div class="container">
         <h1>My Recipes</h1>
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4">
@@ -25,8 +27,8 @@
             </div>
         </div>
     </div>
-{{!-- {{/each}} --}}
+{{/each}}
 
-<script src="../public/js/home.js"></script>
+<script src="./js/home.js"></script>
 
 

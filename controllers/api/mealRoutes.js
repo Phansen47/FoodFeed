@@ -7,14 +7,20 @@ router.get('/', withAuth, async (req, res)=>{
   // return res.json({"name": "whitney"})
   try{
     const mealData = await Meal.findAll({
-      // where:{
-      //   user_id: req.session.user_id
-      // }
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+      where:{
+        user_id: req.session.user_id
+      }
     });
     //serialize data
-    const meals = mealData.map((project) => project.get({ plain: true }));
+    const meals = mealData.map((meal) => meal.get({ plain: true }));
     //render user recipes on home page
-    res.render('homepage', {meals});
+    res.render('homepage', meals);
     res.json(mealData)
   }catch (err){
     res.status(500).json(err)
