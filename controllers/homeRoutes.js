@@ -2,34 +2,8 @@ const router = require('express').Router();
 const { User, Meal } = require('../models');
 const withAuth = require('../utils/auth');
 
-//redirects don't work when logged in, user data and meal data don't render 
-router.get('/', async (req, res) => {
-  try {
-    // Get all meals and JOIN with user data
-    const mealData = await Meal.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
-
-    // Serialize data so the template can read it
-    const meals = mealData.map((meal) => meal.get({ plain: true }));
-      console.log(req.session.user_id);
-      console.log(req.session.logged_in);
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-      meals, 
-      logged_in: req.session.logged_in 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-router.get('/meals/:id', async (req, res) => {
+//render meal view for the meal selected using its id
+router.get('/meals/:id', withAuth, async (req, res) => {
   try {
     const mealData = await Meal.findByPk(req.params.id, {
       include: [
@@ -43,9 +17,10 @@ router.get('/meals/:id', async (req, res) => {
     const meal = mealData.get({ plain: true });
 
     res.render('meal', {
-      ...meal,
+      meal,
       logged_in: req.session.logged_in
     });
+ 
   } catch (err) {
     res.status(500).json(err);
   }
@@ -71,9 +46,11 @@ router.get('/add', withAuth, async (req, res) => {
   }
 });
 
-// Use withAuth middleware to prevent access to route
-//this doesn't work right
+// get route to render homepage with user data and meals associated with the user id
+
 router.get('/', withAuth, async (req, res) => {
+  console.log(req.session.user_id);
+  
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -82,9 +59,9 @@ router.get('/', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
+    console.log(user);
     res.render('homepage', {
-      ...user,
+      user,
       logged_in: true
     });
   } catch (err) {
@@ -92,6 +69,7 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
+//login redirect route redirects to the home page 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {

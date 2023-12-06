@@ -1,1 +1,53 @@
-{{!--  use handlebars to create body content in this screen https://xd.adobe.com/view/be66d19f-c84f-474e-9b56-697f8c5947bf-eb35/screen/a4678016-c30f-4604-92f4-1e1e3dee70c7 --}}
+<div class="d-flex justify-content-center">
+    <div class="card">
+        <h5 class="card-header p-3">{{meal.title}}</h5>
+        <div class="card-body p-3">
+            <h5 class="card-title">Instructions</h5>
+            <p class="card-text">{{meal.instructions}}</p>
+            <br>
+            <h5 class="card-title">Ingredients</h5>
+            <ul class="mb-5">
+                {{#if meal.ingredient1}}
+                <li>{{meal.ingredient1}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient2}}
+                <li>{{meal.ingredient2}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient3}}
+                <li>{{meal.ingredient3}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient4}}
+                <li>{{meal.ingredient4}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient5}}
+                <li>{{meal.ingredient5}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient6}}
+                <li>{{meal.ingredient6}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient7}}
+                <li>{{meal.ingredient7}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient8}}
+                <li>{{meal.ingredient8}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient9}}
+                <li>{{meal.ingredient9}}</li>
+                {{/if}}
+
+                {{#if meal.ingredient10}}
+                <li>{{meal.ingredient10}}</li>
+                {{/if}}
+            </ul>
+            <a href="/" class="btn btn-primary">Back to My Recipes</a>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,7 @@ const viewButtonHandler = async (event) => {
       });
       
       if (response.ok) {
-        document.location.replace('/view');
+        document.location.replace(`/meal/${id}`);
       } else {
         response.json(err)
       }
