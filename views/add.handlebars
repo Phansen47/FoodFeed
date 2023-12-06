@@ -3,128 +3,86 @@
 
 
         <div class="card bg-light">
-            <article class="card-body mx-auto" style="max-width: 400px;">
+            <article class="card-body m-3">
                 <h4 class="card-title mt-3 text-center">Create a New Recipe</h4>
-
 
                 <form>
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
-                        </div>
-                        <input name="" class="form-control" id="recipe-name" placeholder="Recipe Name" type="text">
-                    </div> <!-- form-group// -->
+                        <label for="recipe-name">Recipe Name</label>
+                        <input name="recipe-name" class="form-control mb-1 w-100" id="recipe-name" placeholder="Enter a Recipe Name" type="text">
+                    </div> <!-- title form-group// -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-list-check"></i> </span>
-                        </div>
-                        <textarea class="form-control" id="recipe-instructions" rows="3"
-                            placeholder="Recipe Instructions"></textarea>
-                    </div> <!-- form-group// -->
+                        <label for="recipe-instructions">Instructions</label>
+                        <textarea class="form-control mb-1 w-100" id="recipe-instructions" rows="3"
+                            placeholder="Enter Recipe Instructions"></textarea>
+                    </div> <!-- instructions form-group// -->
 
+                    <div class="form-group input-group">
+                        <label for="category">Recipe Category</label>
+                        <input name="category" class="form-control mb-1 w-100" id="category" placeholder="Enter a category for this recipe" type="text">
+                    </div>
+                    {{!-- category input --}}
+
+                    <div class="form-group input-group">
+                        <label for="area">Recipe Area</label>
+                        <input name="area" class="form-control mb-1 w-100" id="area" placeholder="Enter the area of the world the recipe comes from" type="text">
+                    </div>
+                    {{!-- area input --}}
+                    
                     <!-- Ingredient 1 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-1" type="text" placeholder="Ingredient 1">
-
-                        </input>
+                        <label for="ingredient1">Enter up to 10 ingredients including their measurements</label>
+                        <input class="form-control mb-1 w-100" id="ingredient-1" type="text" placeholder="Ingredient 1">
                     </div>
 
                     <!-- Ingredient 2 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-2" type="text" placeholder="Ingredient 2">
-
-                        </input>
+                        <input class="form-control mb-1 w-100" id="ingredient-2" type="text" placeholder="Ingredient 2">
                     </div>
 
                     <!-- Ingredient 3 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-3" type="text" placeholder="Ingredient 3">
-
-                        </input>
+                        <input class="form-control mb-1 w-100" id="ingredient-3" type="text" placeholder="Ingredient 3">
                     </div>
 
                     <!-- Ingredient 4 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-4" type="text" placeholder="Ingredient 4">
-
-                        </input>
+                        <input class="form-control mb-1 w-100" id="ingredient-4" type="text" placeholder="Ingredient 4">
                     </div>
 
                     <!-- Ingredient 5 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-5" type="text" placeholder="Ingredient 5">
-
-                        </input>
+                        <input class="form-control mb-1 w-100" id="ingredient-5" type="text" placeholder="Ingredient 5">
                     </div>
 
                     <!-- Ingredient 6 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-6" type="text" placeholder="Ingredient 6">
-
-                        </input>
+                        <input class="form-control mb-1 w-100" id="ingredient-6" type="text" placeholder="Ingredient 6">
                     </div>
 
                     <!-- Ingredient 7 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-7" type="text" placeholder="Ingredient 7">
-
-                        </input>
+                        <input class="form-control mb-1 w-100" id="ingredient-7" type="text" placeholder="Ingredient 7">
                     </div>
 
                     <!-- Ingredient 8 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-8" type="text" placeholder="Ingredient 8">
-
-                        </input>
+                        <input class="form-control mb-1 w-100" id="ingredient-8" type="text" placeholder="Ingredient 8">
                     </div>
 
                     <!-- Ingredient 9 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-9" type="text" placeholder="Ingredient 9">
-
-                        </input>
+                        <input class="form-control mb-1 w-100" id="ingredient-9" type="text" placeholder="Ingredient 9">
                     </div>
 
                     <!-- Ingredient 10 -->
                     <div class="form-group input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"> <i class="bi bi-patch-check"></i> </span>
-                        </div>
-                        <input class="form-control" id="ingredient-10" type="text" placeholder="Ingredient 10">
-
-                        </input>
+                        <input class="form-control mb-3 w-100" id="ingredient-10" type="text" placeholder="Ingredient 10">
                     </div>
 
                     <!-- Create Btn -->
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block" id="create-btn"> Create </button>
+                        <button type="submit" class="btn btn-primary" id="create-btn"> Create Recipe </button>
                     </div>
                 </form>
             </article>
@@ -132,3 +90,7 @@
 
     </div>
     <!--container end.//-->
+
+    <script src="./js/add.js"></script>
+
+    
