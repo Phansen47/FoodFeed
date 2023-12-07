@@ -7,8 +7,7 @@
 * [User story](#user-story)
 * [Installation](#installation)
 * [Usage](#usage)
-* [Screenshot](#screenshot)
-* [Video](#video)
+* [Screenshots](#screenshots)
 * [License](#license)
 
 ## Technologies
@@ -26,23 +25,27 @@
 We are creating an app that will allow people to create and ssave recipes for food and drinks. It will include private logins and the ability to create a profile where the user can save and view their recipes.
 ## Installation
 
-***Requirements***
-
-
-
-***Once Installed:***
-
+Log in using the example account with email jordan99@msn.com and password password12345. Once logged in, the user can view the recipes associated with their account and add new recipes. 
 
 ## User Story
 As a chef, I want to easily find and save recipes, so that I don't have to spend a lot of time looking for recipes.
 
-## Installation
-
 ## Usage
+This app can be used as a virtual cookbook where users can save recipes and view them later on when they'd like to cook them. 
 
-## Screenshot
+## Screenshots
 
-## Video
+Login Page: 
+![login](./public/img/login.png) 
+
+My Recipes (sample login): 
+![my recipes](./public/img/myrecipes.png)
+
+View Recipe:
+![view](./public/img/view.png) 
+
+Add Recipe:
+![login](./public/img/add.png) 
 
 ## Credits
 
