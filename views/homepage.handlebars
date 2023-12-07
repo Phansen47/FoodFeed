@@ -10,10 +10,10 @@
         <br>
     </div>
     
-    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 flex-wrap">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 flex-wrap bg-Dark">
         {{#each user.meals as |meal| }}
         <div class="col h-80">
-            <div class="card">
+            <div class="card text-warning">
                 <h3 class="card-header p-3">{{meal.title}} {{{get_emoji}}}</h3>
                 <div class="card-body p-3">
                     <h4>Category: {{meal.category}}</h4>
