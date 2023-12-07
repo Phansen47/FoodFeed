@@ -1,13 +1,11 @@
 <link rel="stylesheet" href="/css/style.css">    
     <div class="container">
 
-
-
         <div class="card bg-dark">
             <article class="card-body m-3">
                 <h4 class="card-title mt-3 text-center text-warning">Create a New Recipe</h4>
 
-                <form>
+                <form id="add-meal-form">
                     <div class="form-group input-group">
                         <label for="recipe-name" class="text-warning">Recipe Name</label>
                         <input name="recipe-name" class="form-control mb-1 w-100" id="recipe-name" placeholder="Enter a Recipe Name" type="text">
@@ -32,7 +30,9 @@
                     
                     <!-- Ingredient 1 -->
                     <div class="form-group input-group">
-                        <label for="ingredient1" class="text-warning">Enter up to 10 ingredients including their measurements</label>
+
+                        <label for="ingredient-1">Enter up to 10 ingredients including their measurements</label>
+
                         <input class="form-control mb-1 w-100" id="ingredient-1" type="text" placeholder="Ingredient 1">
                     </div>
 
