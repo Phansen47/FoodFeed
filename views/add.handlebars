@@ -1,37 +1,38 @@
+<link rel="stylesheet" href="/css/style.css">    
     <div class="container">
 
 
 
-        <div class="card bg-light">
+        <div class="card bg-dark">
             <article class="card-body m-3">
-                <h4 class="card-title mt-3 text-center">Create a New Recipe</h4>
+                <h4 class="card-title mt-3 text-center text-warning">Create a New Recipe</h4>
 
                 <form>
                     <div class="form-group input-group">
-                        <label for="recipe-name">Recipe Name</label>
+                        <label for="recipe-name" class="text-warning">Recipe Name</label>
                         <input name="recipe-name" class="form-control mb-1 w-100" id="recipe-name" placeholder="Enter a Recipe Name" type="text">
                     </div> <!-- title form-group// -->
                     <div class="form-group input-group">
-                        <label for="recipe-instructions">Instructions</label>
+                        <label for="recipe-instructions" class="text-warning">Instructions</label>
                         <textarea class="form-control mb-1 w-100" id="recipe-instructions" rows="3"
                             placeholder="Enter Recipe Instructions"></textarea>
                     </div> <!-- instructions form-group// -->
 
                     <div class="form-group input-group">
-                        <label for="category">Recipe Category</label>
+                        <label for="category" class="text-warning">Recipe Category</label>
                         <input name="category" class="form-control mb-1 w-100" id="category" placeholder="Enter a category for this recipe" type="text">
                     </div>
                     {{!-- category input --}}
 
                     <div class="form-group input-group">
-                        <label for="area">Recipe Area</label>
+                        <label for="area" class="text-warning">Recipe Area</label>
                         <input name="area" class="form-control mb-1 w-100" id="area" placeholder="Enter the area of the world the recipe comes from" type="text">
                     </div>
                     {{!-- area input --}}
                     
                     <!-- Ingredient 1 -->
                     <div class="form-group input-group">
-                        <label for="ingredient1">Enter up to 10 ingredients including their measurements</label>
+                        <label for="ingredient1" class="text-warning">Enter up to 10 ingredients including their measurements</label>
                         <input class="form-control mb-1 w-100" id="ingredient-1" type="text" placeholder="Ingredient 1">
                     </div>
 
@@ -82,7 +83,7 @@
 
                     <!-- Create Btn -->
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary" id="create-btn"> Create Recipe </button>
+                        <button type="submit" class="btn btn-Dark bg-warning" id="create-btn"> Create Recipe </button>
                     </div>
                 </form>
             </article>
