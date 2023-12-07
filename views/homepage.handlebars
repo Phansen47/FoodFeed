@@ -1,35 +1,37 @@
 {{!-- code to start from MVC mini project --}}
 <div class="row">
   <div class="col-auto">
-    {{!-- {{#each meals as |meal|}} --}}
-    <h2>Welcome, {{user.name}}!</h2>
-    {{#each user.meals as |meal| }}
-    <p>{{meal.title}}</p>
-    {{/each}}
+    <h1>Welcome, {{user.name}}!</h1>
   </div>
 </div>
-{{!-- --------------------------------------------------------------------------- --}}
-{{#each user.meals as |meal| }}
-    <div class="container">
-        <h1>My Recipes</h1>
-        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card shadow-sm">
-                        {{!-- deleted img from card --}}
-                    <div class="card-body">
-                        <h3 class="card-title">{{meal.title}}</h3>
-                        {{!-- removed p with card text for now, we will just show the title and the view button --}}
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button type="button" data-id = "{{meal.id}}" class="btn btn-sm btn-outline-secondary">View Recipe</button>
-                            </div>
-                        </div>
+<div class="container">
+    <div class="row">
+        <h2>My Recipes</h2>
+        <br>
+    </div>
+    
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 flex-wrap">
+        {{#each user.meals as |meal| }}
+        <div class="col h-80">
+            <div class="card">
+                <h3 class="card-header p-3">{{meal.title}} {{{get_emoji}}}</h3>
+                <div class="card-body p-3">
+                    <h4>Category: {{meal.category}}</h4>
+                    <br>
+                    <h4>Area: {{meal.area}}</h4>
+                    <br>
+                    <div class="btn-group">
+                        <a href="/meals/{{meal.id}}">
+                            <button type="button" data-id = "{{meal.id}}" class="btn btn-sm btn-outline-secondary">View Recipe</button>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        {{/each}}
     </div>
-{{/each}}
+</div>
+
 
 <script src="./js/home.js"></script>
 
